@@ -1,0 +1,12 @@
+/target/
+/Prints/
+/build.bat
+/task restart.bat
+/task create.bat
+/botCLI.jar
+/bot full run.bat
+/config.properties
+/bot update.bat
+/.idea/
+/.settings/
+/.project

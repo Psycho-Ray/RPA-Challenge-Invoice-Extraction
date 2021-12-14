@@ -7,8 +7,7 @@ import dev.botcity.maestro_sdk.model.AlertType;
 import dev.botcity.maestro_sdk.model.AutomationTask;
 import dev.botcity.maestro_sdk.runner.BotExecution;
 import dev.botcity.maestro_sdk.runner.RunnableAgent;
-import dev.botcity.modules.InputForms.InputForms;
-import dev.botcity.modules.InputForms.InputFormsFaster;
+import dev.botcity.modules.InvoiceExtraction.InvoiceExtraction;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 
 import java.io.IOException;
@@ -29,10 +28,7 @@ public class RPA_Challenge implements RunnableAgent {
 		if (execution != null) sdk.login(execution);
 
 		//Process
-		try {
-			new InputForms().action();
-			new InputFormsFaster().action();
-		}
+		try { new InvoiceExtraction().action(); }
 		catch (Exception e) { abort(e); }
 
 		//Finishes this task with success on the Maestro
